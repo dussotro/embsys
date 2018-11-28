@@ -32,7 +32,7 @@ On a reçu le signal SEGV.
 (gdb) bt
 #0  strlen () at ../sysdeps/x86_64/strlen.S:106
 #1  0x00007ffff767769c in _IO_puts (str=0x0) at ioputs.c:35
-#2  0x00007ffff79d2b41 in knot_to_kmh_str (not=5.51000023, size=6, format=0x7ffff79d300f "%05.1f", 
+#2  0x00007ffff79d2b41 in knot_to_kmh_str (not=5.51000023, size=6, format=0x7ffff79d300f "%05.1f",
     kmh_str=0x7fffffffdb50 "010.2") at nmea.c:23
 #3  0x00007ffff79d2f98 in nmea_vtg (vtg=0x7fffffffdb90) at nmea.c:178
 #4  0x0000000000400bc4 in write_vtg (fd=3) at gps.c:40
@@ -45,9 +45,9 @@ En effet, on fonctionne avec un pile d'appel, il faut donc regarder l'étape #0 
 
 **Question 4** : Que se passe-t-il quand vous lancez GDB en mode interactif sur le binaire *gps*?
 
-On peut voir toutes les étapes une à une du programme, gdb essaye d'aller chercher des problèmes supplémentaires. 
+On peut voir toutes les étapes une à une du programme, gdb essaye d'aller chercher des problèmes supplémentaires.
 
-RQ : 
+RQ :
 sh permet d'executer un script bash sans conserver les variables d'environnement
 . permet de les garder dans le terminal après execution
 
@@ -67,7 +67,7 @@ Grâce à ldd, on peut le problème lié aux librairies, ici le programme ne les
 
 Ici, plusieurs solutions fonctionnent:
  - ajouter les librairies sous *~/local*
-  par exemple et la commande 
+  par exemple et la commande
 
 ````
 export LD_LIBRARY_PATH=~/local/
@@ -82,7 +82,6 @@ export LD_LIBRARY_PATH=~/local/
 
  **Question 8** : Dans quel contexte ce type d'outils peut être intéressant?
 
-Utilisation sur un serveur distant, comme en système embarqué ou l'on peut débloquer sur l'ordinateur avec de la puissance de calcul.
+Utilisation sur un serveur distant, comme en système embarqué où l'on peut débeuguer sur notre ordinateur avec les capacités de celui-ci.
 
 ## Exercice 2 : LD_PRELOAD et sigaction
-
