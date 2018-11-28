@@ -1,0 +1,7 @@
+all : hook
+
+hook:
+	LD_PRELOAD=libhook.so ../gps
+	gcc -g -Wall hook.c -o hook.o
+
+

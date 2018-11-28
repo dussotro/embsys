@@ -17,7 +17,7 @@ $ sh run.sh
 PTTY: /dev/pts/3
 ````
 
-**Question 1** : Selon vous, à quoi correspond le champs indiqué par
+  GPS**Question 1** : Selon vous, à quoi correspond le champs indiqué par
                 *PTTY*?
 
 Pour la suite, placez vous dans le répertoire *gps_reader* contenant :
