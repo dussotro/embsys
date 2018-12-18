@@ -1,4 +1,7 @@
 ## Partie 1 : Construction d'OS avec Buildroot et chaine de cross-compilation
+##### LOL
+
+
 
 ### Decouverte de Buildroot
 
